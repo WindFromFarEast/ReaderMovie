@@ -1,0 +1,21 @@
+<import src="movie-list/movie-list-template.wxml"/>
+<import src="movie-grid/movie-grid-template.wxml"/>
+
+<!--搜索栏-->
+<view class='search'>
+    <icon class='search-img' type='search' size='13' color='#405f88'></icon>
+    <input type='text' placeholder='红海行动、唐人街探案2' placeholder-class='placeholder' bindfocus='onBindFocus' bindconfirm='onBindConfirm' value='{{searchText}}'></input>
+    <image src='/images/icon/xx.png' bindtap='onCancelSearchTap' wx:if="{{searchCancelShow}}"></image>
+</view>
+
+<!--电影首页-->
+<view class='container' wx:if="{{containerShow}}">
+    <template is="movieListTemplate" data="{{...inTheaters}}"/>
+    <template is="movieListTemplate" data="{{...comingSoon}}"/>
+    <template is="movieListTemplate" data="{{...top250}}"/>
+</view>
+
+<!--搜索页面 默认隐藏-->
+<view class='search-pannel' wx:if="{{searchPannelShow}}"> 
+    <template is="movieGridTemplate" data="{{...searchResult}}"/>
+</view>

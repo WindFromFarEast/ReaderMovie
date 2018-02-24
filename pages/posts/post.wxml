@@ -1,0 +1,23 @@
+<import src="post-item/post-item-template.wxml"/>
+<view>
+    <!--滑块视图容器——轮播组件-->
+    <swiper catchtap='onSwiperTap' class='swiper' indicator-dots='true' autoplay='true' interval='5000'>
+        <!--轮播子项-->
+        <swiper-item>
+            <image src='/images/wx.png' data-postId="3"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/vr.png' data-postId="4"></image>  
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/iqiyi.png' data-postId='5'></image>  
+        </swiper-item>
+    </swiper>
+    <!--新闻列表-->
+    <block wx:for='{{posts_key}}' wx:for-item="item" wx:for-index="idx">
+        <!--template-->
+        <view catchtap="onPostTap" data-postId="{{item.postId}}">
+            <template is="postItem" data="{{...item}}"/>
+        </view>
+    </block>
+</view>

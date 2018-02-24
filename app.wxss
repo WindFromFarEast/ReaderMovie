@@ -1,0 +1,6 @@
+/*小程序全局样式*/
+text{
+    font-family: Mirosoft Yahei;
+    font-size: 24rpx;
+    color: #666;
+}

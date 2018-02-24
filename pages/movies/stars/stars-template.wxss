@@ -1,0 +1,27 @@
+/*星级评分template——容器样式*/
+.stars-container{
+    display: flex;
+    /*水平排列*/
+    flex-direction: row;
+}
+
+/*五个星星*/
+.stars{
+    display: flex;
+    flex-direction: row;
+    height: 17rpx;
+    margin-right: 24rpx;
+    margin-top: 6rpx;
+}
+
+/*每个星星*/
+.stars image{
+    padding-left: 3rpx;
+    height: 17rpx;
+    width: 17rpx;
+}
+
+/*评分*/
+.star-score{
+    color: #1f3463;
+}
