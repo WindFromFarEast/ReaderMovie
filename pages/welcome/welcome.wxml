@@ -4,7 +4,7 @@
 <view class='container'>
     <image class='user-avatar' src='/images/avatar/1.png'></image>
     <!--文本标签-->
-    <text class='user-name'><text style='color:red'>Hello</text>，轻风起自远东</text>
+    <text class='user-name'><text style='color:red'>Hello</text>，{{username}}</text>
     <!--按钮：容器加文本组成-->
     <view class='moto-container' bindtap='onTap'>
         <text class='moto'>开启小程序之旅</text>
